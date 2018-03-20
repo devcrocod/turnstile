@@ -1,4 +1,4 @@
-package com.devcrocod.turnstile;
+package com.devcrocod.turnstile.data;
 
 public class DiscreteTime {
 
@@ -6,13 +6,13 @@ public class DiscreteTime {
 
     private Long timeMin;
 
-    DiscreteTime(String direct, Long timeMin) {
+    public DiscreteTime(String direct, Long timeMin) {
         this.direct = direct;
         this.timeMin = timeMin;
     }
 
 
-    DiscreteTime(String[] str) {
+    public DiscreteTime(String[] str) {
         setDirect(str[0]);
         setTimeMin(str[1]);
     }

@@ -1,4 +1,7 @@
-package com.devcrocod.turnstile;
+package com.devcrocod.turnstile.impl;
+
+import com.devcrocod.turnstile.data.DiscreteTime;
+import com.devcrocod.turnstile.inter.CountingTime;
 
 import java.util.List;
 
