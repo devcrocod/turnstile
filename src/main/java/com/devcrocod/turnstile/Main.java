@@ -12,8 +12,5 @@ public class Main {
         wwf.readFile(filename, employeeDay);
         CountingTime countingTime = new CountingTimeImpl();
         System.out.println(countingTime.counting(employeeDay));
-
-
-        String s = " s";
     }
 }
