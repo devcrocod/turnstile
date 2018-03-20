@@ -1,4 +1,4 @@
-package com.devcrocod.turnstile.data;
+package com.devcrocod.turnstile.impl;
 
 import com.devcrocod.turnstile.inter.Worker;
 

@@ -1,7 +1,7 @@
 package com.devcrocod.turnstile;
 
 import com.devcrocod.turnstile.data.DiscreteTime;
-import com.devcrocod.turnstile.data.WorkerImpl;
+import com.devcrocod.turnstile.impl.WorkerImpl;
 import com.devcrocod.turnstile.impl.CountingTimeImpl;
 import com.devcrocod.turnstile.impl.WorkWithFilesImpl;
 import com.devcrocod.turnstile.inter.CountingTime;
