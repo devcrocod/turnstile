@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form action="/result">
+        Day:<br>
+        <input type="text" name="day">
+        <br><br>
+        <input type="submit" value="Submit">
+        <br>
+    </form>
+</div>
+<table style="width: 100%">
+    <tr>
+        <th>дата</th>
+        <th>Время на рабочем месте</th>
+    </tr>
+    <div th:each="map: ${mapResult}">
+        <div th:each="mapEntry: ${map}">
+
+
+            <tr>
+                <th><span th:text="${mapEntry.key}"></span></th>
+                <th><span th:text="${mapEntry.value}"></span></th>
+            </tr>
+        </div>
+    </div>
+</table>
+</body>
+</html>

@@ -9,9 +9,19 @@ public class WorkerImpl implements Worker {
     private final Map<String, String> result = new HashMap<>();
 
     @Override
-    public String getResult(String day) {
-        if (!day.matches("\\d{2}-\\d{2}-\\d{4}")) throw new IllegalArgumentException();
-        return (result.get(day) != null) ? result.get(day) : "Нет данных за этот день";
+    public Map<String, String> getResult(String day) {
+        if (day.equals("All"))
+            return result;
+        else {
+            String str;
+            if (day.matches("\\d{2}-\\d{2}-\\d{4}")) {
+                str = (result.get(day) != null) ? result.get(day) : "Нет данных за этот день";
+            } else
+                str = "Неккоректный ввод";
+            Map<String, String> map = new HashMap<>();
+            map.put(day, str);
+            return map;
+        }
     }
 
     @Override
